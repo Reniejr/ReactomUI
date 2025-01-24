@@ -10,7 +10,7 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: './src/components/index.js',
+      entry: './src/index.js',
       name: 'ReactomUI',
       fileName: (format) => `reactom-ui.${format}.js`,
     },
