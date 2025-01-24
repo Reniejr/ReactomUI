@@ -1,6 +1,6 @@
 {
   "name": "reactomui",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "main": "dist/reactom-ui.umd.js",
   "module": "dist/reactom-ui.es.js",
   "scripts": {
