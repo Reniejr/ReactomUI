@@ -1,0 +1,28 @@
+@mixin animation($animations...){
+    animation: $animations;
+}
+
+@keyframes blink{
+    0%{
+        opacity: 1;
+    };
+    50%{
+        opacity: 0;
+    };
+    100%{
+        opacity: 1;
+    };
+}
+
+$text_blink: blink 1s infinite ease-in-out;
+
+@keyframes alertShow{
+    0%{
+        right: -30vw
+    };
+    100%{
+        right: 20px;
+    };
+}
+
+$alertShow: alertShow 0.3s 1 ease-in-out;

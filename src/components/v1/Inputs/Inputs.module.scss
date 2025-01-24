@@ -1,0 +1,77 @@
+@use '../../../styles/main.scss';
+
+.input-container{
+    @include main.flexBox(column, flex-start, stretch);
+    gap: 5px;
+}
+
+.input-label{
+    font-size: 14px;
+}
+
+.input{
+    width: 100%;
+    outline: none;
+    border: 0.5px solid rgba($color: main.$pure_b, $alpha: 0.1);
+    padding: 8px 10px;
+    font-size: 15px;
+}
+
+.input-file-container{
+    @include main.flexBox(column, flex-start, stretch);
+    width: 100%;
+
+    .input-file-area-trigger{
+        width: 100%;
+        padding: 8px 10px;
+        position: relative;
+        border: 0.5px solid rgba($color: main.$pure_b, $alpha: 0.1);
+        cursor: pointer;
+        @include main.transition(all .2s ease);
+
+        input[type="file"]{
+            display: none;
+        }
+
+        .input-file-label{
+            font-size: 15px;
+        }
+
+        &:hover{
+            background-color: rgba($color: main.$pure_b, $alpha: 0.05);
+        }
+    }
+}
+
+.input-password-container{
+    @include main.flexBox(row, space-between, center);
+    gap: 5px;
+    border: 0.5px solid rgba($color: main.$pure_b, $alpha: 0.1);
+    padding: 8px 10px;
+
+    .show-hide-icon,
+    ion-icon[name="eye-outline"],
+    ion-icon[name="eye-off-outline"] {
+        cursor: pointer;
+    }
+
+    .input{
+        border: none;
+        padding: 0;
+    }
+}
+
+.input-phone{
+    padding: 0;
+    padding-left: 10px;
+    input{
+        border: none;
+        outline: none;
+        padding: 8px 10px;
+        margin-left: 5px;
+    }
+}
+
+.input-textarea{
+    font-family: inherit;
+}
