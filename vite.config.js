@@ -10,9 +10,13 @@ export default defineConfig({
   },
   build: {
     lib: {
-      entry: './src/index.js',
+      entry: {
+        main: './src/index.js',
+        v1: './src/components/v1/index.js',
+        styles: './src/styles/index.js'
+      },
       name: 'ReactomUI',
-      fileName: (format) => `reactom-ui.${format}.js`,
+      fileName: (format, entry) => `reactomui/${entry}.${format}.js`,
     },
     rollupOptions: {
       external: ['react', 'react-dom'],
@@ -21,6 +25,8 @@ export default defineConfig({
           react: 'React',
           'react-dom': 'ReactDOM',
         },
+        preserveModules: true, // Preserve file structure
+        preserveModulesRoot: 'src', // Set root directory for preserved modules
       },
     },
   },

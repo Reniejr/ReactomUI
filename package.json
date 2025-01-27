@@ -1,6 +1,6 @@
 {
   "name": "reactomui",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "main": "dist/reactom-ui.umd.js",
   "module": "dist/reactom-ui.es.js",
   "scripts": {
@@ -10,8 +10,18 @@
   "author": "",
   "license": "ISC",
   "description": "",
+  "exports": {
+    "./v1/*": "./dist/reactomui/v1/*",
+    "./v2/*": "./dist/reactomui/v2/*",
+    "./styles": "./dist/reactomui/styles.css",
+    ".": {
+      "import": "./dist/reactomui/main.es.js",
+      "require": "./dist/reactomui/main.umd.js"
+    }
+  },
   "files": [
-    "dist"
+    "dist",
+    "components"
   ],
   "peerDependencies": {
     "react": "^18.0.0",
